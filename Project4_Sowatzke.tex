@@ -92,10 +92,20 @@ The pdf of the Nth-order statistic is the derivative of the cdf given in equatio
 f_{X_{(N)}}(x) = N[F_X(x)]^{N-1}f_X(x)
 \end{equation}
 \section{Overall order Statistics}
-The results from Section \ref{First-Order Statistic Section} and \ref{Nth-Order Statistic Section} can be generalized, to provide the pdf for nth-order statistic where $n\in[1,N]$.
+The results from Section \ref{First-Order Statistic Section} and \ref{Nth-Order Statistic Section} can be generalized, to provide the pdf for nth-order statistic where $n\in[1,N]$. 
+\begin{figure}[H]
+\centerline{\includegraphics[width=0.5\textwidth]{prob_pdf.png}}
+\caption{Probability that x lies in interval $(x, x+dx]$.}
+\label{Probability of Interval}
+\end{figure}
+\noindent
+Referring to Fig. \ref{Probability of Interval}, the pdf of the n-th order statistic can be expressed in terms of a probability as follows: 
 \begin{equation}
-P_n(k_1,...,k_r)=\frac{n!}{k_1! \cdots k_r!}p_1^{k_1} \cdots p_r^{k_r}
+f_{X_{(n)}}(x)dx = P(\{x < X_{(n)} \leq x+dx\})
 \end{equation}
+For $X_{(n)}$ to lie in interval $(x,x+dx]$, n-1 $X$'s must lie in the interval $(-\infty,x]$, 1 $X$ must lie in the interval $(x,x+dx]$, and N-n $X$'s must lie in the interval $(x+dx,\infty)$. 
+\par
+Let $A_1,A_2,\text{ and }A_3$ be the events that $X$ lies in the intervals $(-\infty,x],(x,x+dx],\text{ and }(x+dx,\infty)$ respectively.
 \begin{equation}
 A_1 = \{X \leq x\}
 \end{equation}
@@ -105,6 +115,14 @@ A_2 = \{x < X \leq x + dx\}
 \begin{equation}
 A_3 = \{X > x + dx\}
 \end{equation}
+The probability that $X_{(n)}$ lies in the interval $(x,x+dx]$, can be viewed as taking N samples from the distribution $F_X(x)$. The probability of interest is then the probability of n-1 occurences of $A_1$, 1 occurence of $A_2$, and N-n occurences of $A_3$.
+\begin{equation}
+\begin{gathered}
+P\{x < X_{(n)} \leq x + dx\}=\\
+\frac{N!}{(n-1)!1!(N-n)!}(P(A_1))^{n-1}P(A_2)(P(A_3))^{N-n}
+\end{gathered}
+\end{equation}
+The probabilities of the events $A_1,A_2,\text{ and }A_3$ can be written as follows:
 \begin{equation}
 P(A_1) = P(\{X \leq x\}) = F_X(x)
 \end{equation}
@@ -114,20 +132,9 @@ P(A_2) = P(\{x < X \leq x + dx\}) = f_X(x)dx
 \begin{equation}
 P(A_3) = P(\{X > x + dx\}) = 1 - P(\{X \leq x + dx\})
 \end{equation}
-%The first order statistic is the probability that one of the random variables $X$ falls in the the interval  
 As $dx \rightarrow 0$, $P(\{X \leq x + dx\}) \rightarrow F_X(x)$. Therefore, $P(A_3)$ can be expressed as follows:
 \begin{equation}
 P(A_3) = 1 - F_X(x)
-\end{equation}
-\begin{equation}
-f_{X_{(n)}}(x)dx = P\{x < X_{(n)} \leq x + dx\}
-\end{equation}
-$P\{x < X_{(n)} \leq x + dx\}$ is the probability that 1 $X$ falls in the interval $(x, x+dx]$, $n-1$ $X$'s fall in the interval $(-\infty, x]$, and $N-n$ $X$'s fall in the interval $(x+dx, \infty)$. It can be expressed in the following form:
-\begin{equation}
-\begin{gathered}
-P\{x < X_{(n)} \leq x + dx\}=\\
-\frac{N!}{(n-1)!1!(N-n)!}(P(A_1))^{n-1}P(A_2)(P(A_3))^{N-n}
-\end{gathered}
 \end{equation}
 Substituting values for probabilities, the following result can be generated:
 \begin{equation}
@@ -144,20 +151,71 @@ f_{X_{(n)}}(x)=\frac{N!}{(n-1)!(N-n)!}\cdot\\
 \end{gathered}
 \end{equation}
 
-
-The pdf of the first order statistic $X_{(1)}$ can be defined as follows:
-\begin{equation}
-f_{X_{(1)}}(x)=\frac{P(\{x < X_{(1)} \leq x+dx\})}{dx}
-\end{equation}
-After rearranging terms, the equation can be expressed as follows:
-\begin{equation}
-f_{X_{(1)}}(x)dx=P(\{x < X_{(1)} \leq x+dx\})
-\end{equation}
-If $X_k$ is the smallest random variable 
-\begin{equation}
-P(\{x < X_k \leq x+dx\} \cap \{X_i > x+dx\}) \quad \forall i \neq k 
-\end{equation}
-%\section{N-th order Statistic}
+%\begin{equation}
+%P_n(k_1,...,k_r)=\frac{n!}{k_1! \cdots k_r!}p_1^{k_1} \cdots p_r^{k_r}
+%\end{equation}
+%%\begin{equation}
+%%A_1 = \{X \leq x\}
+%%\end{equation}
+%%\begin{equation}
+%%A_2 = \{x < X \leq x + dx\}
+%%\end{equation}
+%%\begin{equation}
+%%A_3 = \{X > x + dx\}
+%%\end{equation}
+%\begin{equation}
+%P(A_1) = P(\{X \leq x\}) = F_X(x)
+%\end{equation}
+%\begin{equation}
+%P(A_2) = P(\{x < X \leq x + dx\}) = f_X(x)dx
+%\end{equation}
+%\begin{equation}
+%P(A_3) = P(\{X > x + dx\}) = 1 - P(\{X \leq x + dx\})
+%\end{equation}
+%%The first order statistic is the probability that one of the random variables $X$ falls in the the interval  
+%As $dx \rightarrow 0$, $P(\{X \leq x + dx\}) \rightarrow F_X(x)$. Therefore, $P(A_3)$ can be expressed as follows:
+%\begin{equation}
+%P(A_3) = 1 - F_X(x)
+%\end{equation}
+%\begin{equation}
+%f_{X_{(n)}}(x)dx = P\{x < X_{(n)} \leq x + dx\}
+%\end{equation}
+%$P\{x < X_{(n)} \leq x + dx\}$ is the probability that 1 $X$ falls in the interval $(x, x+dx]$, $n-1$ $X$'s fall in the interval $(-\infty, x]$, and $N-n$ $X$'s fall in the interval $(x+dx, \infty)$. It can be expressed in the following form:
+%\begin{equation}
+%\begin{gathered}
+%P\{x < X_{(n)} \leq x + dx\}=\\
+%\frac{N!}{(n-1)!1!(N-n)!}(P(A_1))^{n-1}P(A_2)(P(A_3))^{N-n}
+%\end{gathered}
+%\end{equation}
+%Substituting values for probabilities, the following result can be generated:
+%\begin{equation}
+%\begin{gathered}
+%f_{X_{(n)}}(x)dx=\frac{N!}{(n-1)!1!(N-n)!}\cdot\\
+%[F_X(x)]^{n-1}(f_X(x)dx)[1-F_X(x)]^{N-n}
+%\end{gathered}
+%\end{equation}
+%Dividing both sides of the equation by $dx$, the final result can be generated generated:
+%\begin{equation}
+%\begin{gathered}
+%f_{X_{(n)}}(x)=\frac{N!}{(n-1)!(N-n)!}\cdot\\
+%[F_X(x)]^{n-1}[1-F_X(x)]^{N-n}f_X(x)
+%\end{gathered}
+%\end{equation}
+%
+%
+%The pdf of the first order statistic $X_{(1)}$ can be defined as follows:
+%\begin{equation}
+%f_{X_{(1)}}(x)=\frac{P(\{x < X_{(1)} \leq x+dx\})}{dx}
+%\end{equation}
+%After rearranging terms, the equation can be expressed as follows:
+%\begin{equation}
+%f_{X_{(1)}}(x)dx=P(\{x < X_{(1)} \leq x+dx\})
+%\end{equation}
+%If $X_k$ is the smallest random variable 
+%\begin{equation}
+%P(\{x < X_k \leq x+dx\} \cap \{X_i > x+dx\}) \quad \forall i \neq k 
+%\end{equation}
+%%\section{N-th order Statistic}
 \section{Conclusion}
 %Both Monte Carlo (MC) Simulations and Importance Sampling (IS) are techniques for estimating probabilities. In this document, both techniques will be used to estimate the probability that a random variable $X$ with distribution $X\sim N(1,1)$ exceeds 3.957 (i.e. $P\{X > 3.957\}$).
 %\section{Monte Carlo Simulation}
