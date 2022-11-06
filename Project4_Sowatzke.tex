@@ -23,11 +23,13 @@ osowatzke@arizona.edu}}
 \maketitle
 
 \begin{abstract}
-Consider the set of N iid random variables $\{X_1,...,X_N\}$. The set of random variables can be sorted in ascending order to form a ordered list of random variables $\{X_{(1)},...,X_{(N)}\}$. The n-th ordered statistic is the random variable $X_{(n)}$. This paper derives the pdf of the first-order statistic $X_{(1)}$ and the pdf of the Nth-order statistic $X_{(N)}$. Then, the results are generalized to form the overall order statistics (the pdf of the nth-order statistic $X_{(n)}$ where $N\in [1, N]$).
+Assume an FFT is used to detect a tone in the presence of noise. If the absolute value of the spectrum is taken and compared to a threshold, what is the probability that the largest noise spectrum sample will trigger the detection logic? To solve this problem, the probability density function (pdf) of the largest noise spectrum sample is required. In this paper, a set of iid random variables $\{X_1,...,X_N\}$ will be considered. %This set of random variable could be the absolute value of the noise FFT. 
+This set of random variables will be sorted in increasing order to form the ordered statistics, denoted as $\{X_{(1)},...,X_{(N)}\}$. Then, the pdf of the first-order statistic, $f_{X_{(1)}}(x)$, and the pdf of the Nth-order statistic, $f_{X_{(N)}}(x)$, will be derived. Finally, the pdf of the overall order statistics will be derived ($f_{X_{(n)}}(x)$ for $n\in [1, N]$). The results derived in this paper can not only be applied to the FFT problem, but many other engineering applications.
+%Consider the set of N iid random variables $\{X_1,...,X_N\}$. The set of random variables can be sorted in ascending order to form a ordered list of random variables $\{X_{(1)},...,X_{(N)}\}$. The n-th ordered statistic is the random variable $X_{(n)}$. This paper derives the pdf of the first-order statistic $X_{(1)}$ and the pdf of the Nth-order statistic $X_{(N)}$. Then, the results are generalized to form the overall order statistics (the pdf of the nth-order statistic $X_{(n)}$ where $N\in [1, N]$).
 \end{abstract}
 
 \begin{IEEEkeywords}
-Random Variables, Ordered Statistics, Probability Density Function, Cumulative Distribution Function
+Random Variables, Order Statistics, Probability Density Function, Cumulative Distribution Function
 \end{IEEEkeywords}
 
 \section{Introduction}
