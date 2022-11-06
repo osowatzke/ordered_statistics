@@ -120,26 +120,50 @@ f_{X_{(1)}}(x) = N[1 - F_X(x)]^{N-1}f_X(x)
 \end{equation}
 \section{Nth-Order Statistic}
 \label{Nth-Order Statistic Section}
-The cdf of the Nth-order statistic is given by
+
+% Original Code
+%The cdf of the Nth-order statistic is given by
+%\begin{equation}
+%F_{X_{(N)}}(x) = P(\{X_{(N)} \leq x\})
+%\end{equation}
+%For $X_{(N)}$ to be less than or equal to $x$, each $X$ ($X_1,...,X_N$) must be less than or equal to $x$.
+%\begin{equation}
+%F_{X_{(N)}}(x) = P(\{X_1 \leq x \} \cap \cdots \cap \{X_N \leq x \})
+%\end{equation}
+%Because $X_1,...,X_N$ are independent with the same distribution, the cdf can be expressed in the following form:
+%\begin{equation}
+%F_{X_{(N)}}(x) = [P(\{X \leq x \}]^N
+%\end{equation}
+%Substituting $F_X(x)$ for $P(\{X \leq x \}$, the cdf is given by the following:
+%\begin{equation}
+%\label{Nth order cdf}
+%F_{X_{(N)}}(x) = [F_X(x)]^N
+%\end{equation}
+%The pdf of the Nth-order statistic is the derivative of the cdf given in equation \eqref{Nth order cdf}. After taking the derivative, the following result ensues.
+%\begin{equation}
+%f_{X_{(N)}}(x) = N[F_X(x)]^{N-1}f_X(x)
+%\end{equation}
+
+% New Code
+The cdf of the Nth-order statistic function can be expressed as follows:
 \begin{equation}
 F_{X_{(N)}}(x) = P(\{X_{(N)} \leq x\})
 \end{equation}
-For $X_{(N)}$ to be less than or equal to $x$, each $X$ ($X_1,...,X_N$) must be less than or equal to $x$.
+If $X_{(N)} \leq x$, $X_{(1)},...,X_{(N-1)}$ are also less than or equal to $x$. Therefore, if  $X_{(N)} \leq x$, each of the random variables $X_1,...,X_N$ must be less than or equal to $x$.
 \begin{equation}
-F_{X_{(N)}}(x) = P(\{X_1 \leq x \} \cap \cdots \cap \{X_N \leq x \})
+F_{X_{(N)}}(x) = P\left(\bigcap_{i=1}^N\{X_i \leq x\}\right)
 \end{equation}
-Because $X_1,...,X_N$ are independent with the same distribution, the cdf can be expressed in the following form:
+Because the random variables $X_1,...,X_N$ are independent, the cdf of the Nth-order statistic can be written as follows:
 \begin{equation}
-F_{X_{(N)}}(x) = [P(\{X \leq x \}]^N
+F_{X_{(N)}}(x) = \prod_{i=1}^N P(\{X_i \leq x\})
 \end{equation}
-Substituting $F_X(x)$ for $P(\{X \leq x \}$, the cdf is given by the following:
+This equation can be rewritten in terms of the distribution functions $F_{X_1}(x),...,F_{X_N}(x)$ as follows:
 \begin{equation}
-\label{Nth order cdf}
+F_{X_{(N)}}(x) = \prod_{i=1}^N F_{X_i}(x)
+\end{equation}
+Because each of the random variables has the same distribution function, the cdf of Nth-order statistic function, can be expressed as follows:
+\begin{equation}
 F_{X_{(N)}}(x) = [F_X(x)]^N
-\end{equation}
-The pdf of the Nth-order statistic is the derivative of the cdf given in equation \eqref{Nth order cdf}. After taking the derivative, the following result ensues.
-\begin{equation}
-f_{X_{(N)}}(x) = N[F_X(x)]^{N-1}f_X(x)
 \end{equation}
 \section{Overall order Statistics}
 The results from Section \ref{First-Order Statistic Section} and \ref{Nth-Order Statistic Section} can be generalized, to provide the pdf for nth-order statistic where $n\in[1,N]$. 
