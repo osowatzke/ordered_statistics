@@ -27,11 +27,24 @@ Consider the set of N iid random variables $\{X_1,...,X_N\}$. The set of random 
 \end{abstract}
 
 \begin{IEEEkeywords}
-Random Variables, Ordered Statistics, Probability Density Function
+Random Variables, Ordered Statistics, Probability Density Function, Cumulative Distribution Function
 \end{IEEEkeywords}
 
 \section{Introduction}
-%Consider N random variables $\{X_1,...,X_N\}$ that are iid with pdf $f_X(x)$. The goal in this section is to derive pdfs for the minimum $X_{(1)}=\text{min}(X_1,...,X_N)$ (called the first-order statistic), the maximum $X_{(1)}=\text{max}(X_1,...,X_N)$ (called the N-th order statistic), as well as the overall order statistics. 
+Consider N random variables $\{X_1,...,X_N\}$ that are iid with pdf $f_X(x)$. The set of random variables are sorted in ascending order to produce the ordered set of random variable $\{X_{(1)},...,X_{(N)}\}$. The first order statistic is defined as the following:
+\begin{equation}
+X_{(1)}\triangleq\text{min}\{X_1,...,X_N\}
+\end{equation}
+Similarly, the Nth-order statistic is defined as the following:
+\begin{equation}
+X_{(N)}\triangleq\text{max}\{X_1,...,X_N\}
+\end{equation}
+In this document, the pdf of the first-order statistic $f_{X_{(1)}}(x)$ and the pdf of the Nth-order statistic $f_{X_{(N)}}(x)$ are derived. Finally, the pdf of the overall order statistics is derived (i.e. $f_{X_{(n)}}(x)$ for any $n\in[1,N]$).
+%(the pdf of $X_{(n)} \quad \forall n \in[1, N]$) are derived.
+% $\triangleq\text{min}\{X_1,...,X_N\}$
+
+
+%The goal in this section is to derive pdfs for the minimum $X_{(1)}=\text{min}(X_1,...,X_N)$ (called the first-order statistic), the maximum $X_{(1)}=\text{max}(X_1,...,X_N)$ (called the N-th order statistic), as well as the overall order statistics. 
 %Sort these variables in ascending order. If the random variables are sorted in increasing order, the   
 
 %Suppose N random variables are drawn from the distribution of the random variable X {
