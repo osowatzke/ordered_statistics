@@ -33,7 +33,7 @@ Random Variables, Order Statistics, Probability Density Function, Cumulative Dis
 \end{IEEEkeywords}
 
 \section{Introduction}
-Consider N random variables $\{X_1,...,X_N\}$ that are iid with pdf $f_X(x)$. The set of random variables are sorted in ascending order to produce the ordered set of random variable $\{X_{(1)},...,X_{(N)}\}$. The first order statistic is defined as the following:
+Consider N random variables $\{X_1,...,X_N\}$ that are iid with pdf $f_X(x)$. The set of random variables are sorted in ascending order to produce the ordered statistics, denoted as $\{X_{(1)},...,X_{(N)}\}$. The first order statistic is defined as the following:
 \begin{equation}
 X_{(1)}\triangleq\text{min}\{X_1,...,X_N\}
 \end{equation}
@@ -262,7 +262,7 @@ f_{X_{(n)}}(x) = Nf_X(x)\sum_{k=n}^{N}\binom{N-1}{k-1}[F_X(x)]^{k-1}\\
 \cdot[F_X(x)]^{k}[1-F_X(x)]^{N-k-1}
 \end{gathered}
 \end{equation}
-If $m$ is defined as $k-1$ in the first summation, the equation can be rewritten as:
+If $m$ is substituted for $k-1$ in the first summation, the equation can be rewritten as:
 \begin{equation}
 \begin{gathered}
 f_{X_{(n)}}(x) = Nf_X(x)\sum_{m=n-1}^{N-1}\binom{N-1}{m}[F_X(x)]^{m}\\
@@ -408,7 +408,7 @@ Substituting $n=1$ and $n=N$, the pdf of the first-order and Nth-order statistic
 %\end{equation}
 %%\section{N-th order Statistic}
 \section{Conclusion}
-In this document, a set of iid random variables $\{X_1,...,X_n\}$ with pdf $f_X(x)$ was considered. This set of random variables was arranged in increasing order to produce the ordered statistics, denoted by $\{X_{(1)},...,X_{(n)}\}$. The pdf of the first-order statistic, $f_{X_{(1)}}(x)$, was derived. Next, the pdf of the Nth-order statistic, $f_{X_{(N)}}(x)$, was derived. Finally, the pdf of the overall order statistics was derived ($f_{X_{(n)}}$ for $n\in[1,N]$).
+In this document, a set of iid random variables $\{X_1,...,X_n\}$ with pdf $f_X(x)$ was considered. This set of random variables was arranged in increasing order to produce the ordered statistics, denoted by $\{X_{(1)},...,X_{(n)}\}$. The pdf of the first-order statistic, $f_{X_{(1)}}(x)$, was derived. Next, the pdf of the Nth-order statistic, $f_{X_{(N)}}(x)$, was derived. Finally, the pdf of the overall order statistics was derived ($f_{X_{(n)}}$ for $n\in[1,N]$). These results are very useful and can be applied to many engineering problems.
 %The first-order statistic $X_{(1)}$, Nth-order statistic $X_{(N)}$, and arbitrary nth-order statistic $X_{(n)}$ were considered. The pdf of the first ordered statistic $f_{X_{(1)}}(x)$ and the Nth-ordered statistic $f_{X_{(N)}}(x)$ were derived. 
 %Finally, the result was generalized to an arbt
 %\raggedbottom
