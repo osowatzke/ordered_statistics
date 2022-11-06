@@ -24,7 +24,7 @@ osowatzke@arizona.edu}}
 
 \begin{abstract}
 Assume an FFT is used to detect a tone in the presence of noise. If the absolute value of the spectrum is taken and compared to a threshold, what is the probability that the largest noise spectrum sample will trigger the detection logic? To solve this problem, the probability density function (pdf) of the largest noise spectrum sample is required. In this paper, a set of iid random variables $\{X_1,...,X_N\}$ will be considered. %This set of random variable could be the absolute value of the noise FFT. 
-This set of random variables will be sorted in increasing order to form the ordered statistics, denoted as $\{X_{(1)},...,X_{(N)}\}$. Then, the pdf of the first-order statistic, $f_{X_{(1)}}(x)$, and the pdf of the Nth-order statistic, $f_{X_{(N)}}(x)$, will be derived. Finally, the pdf of the overall order statistics will be derived ($f_{X_{(n)}}(x)$ for $n\in [1, N]$). The results derived in this paper can not only be applied to the FFT problem, but many other engineering applications.
+This set of random variables will be sorted in increasing order to form the ordered statistics, denoted as $\{X_{(1)},...,X_{(N)}\}$. Then, the pdf of the first-order statistic, $f_{X_{(1)}}(x)$, and the pdf of the Nth-order statistic, $f_{X_{(N)}}(x)$, will be derived. Finally, the pdf of the overall order statistics will be derived ($f_{X_{(n)}}(x)$ for $n\in [1, N]$). The results derived in this paper can not only be applied to the FFT problem, but to many other engineering problems.
 %Consider the set of N iid random variables $\{X_1,...,X_N\}$. The set of random variables can be sorted in ascending order to form a ordered list of random variables $\{X_{(1)},...,X_{(N)}\}$. The n-th ordered statistic is the random variable $X_{(n)}$. This paper derives the pdf of the first-order statistic $X_{(1)}$ and the pdf of the Nth-order statistic $X_{(N)}$. Then, the results are generalized to form the overall order statistics (the pdf of the nth-order statistic $X_{(n)}$ where $N\in [1, N]$).
 \end{abstract}
 
@@ -223,7 +223,7 @@ f_{X_{(n)}}(x) = \sum_{k=n}^{N}\binom{N}{k}k[F_X(x)]^{k-1}f_X(x)[1-F_X(x)]^{N-k}
  + \sum_{k=n}^{N}\binom{N}{k}[F_X(x)]^{k}(N-k)[1-F_X(x)]^{N-k-1}(-f_X(x))
 \end{gathered}
 \end{equation}
-The second summation is 0 when $k=N$. After removing this final term and simplifying the equation, the pdf of the nth-order statistic can written as follows:
+The second summation is 0 when $k=N$. After removing the zero term and simplifying the equation, the pdf of the nth-order statistic can written as follows:
 \begin{equation}
 \begin{gathered}
 f_{X_{(n)}}(x) = f_X(x)\sum_{k=n}^{N}\binom{N}{k}k[F_X(x)]^{k-1}[1-F_X(x)]^{N-k}\\
