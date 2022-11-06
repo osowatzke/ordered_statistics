@@ -38,33 +38,83 @@ Random Variables, Ordered Statistics, Probability Density Function
 %
 %The order statistics of a random variable are defined as the pdf.
 \section{First-Order Statistic}
+
 \label{First-Order Statistic Section}
-The cdf of the first-order statistic is given by
+
+%% Orignal Code
+%The cdf of the first-order statistic is given by
+%\begin{equation}
+%F_{X_{(1)}}(x) = P(\{X_{(1)} \leq x\})
+%\end{equation}
+%Note that there are many ways for $X_{(1)}$ to be less than or equal to $x$. To simplify this problem, $F_{X_{(1)}}(x)$ can be expressed in the following form:
+%\begin{equation}
+%F_{X_{(1)}}(x) = 1 - P(\{X_{(1)} > x\})
+%\end{equation}
+%For $X_{(1)}$ to be greater than $x$, each $X$ ($X_1,...,X_N$) must be greater than $x$.
+%\begin{equation}
+%F_{X_{(1)}}(x) = 1 - P(\{X_1 > x \} \cap \cdots \cap \{X_N > x \})
+%\end{equation}
+%Because $X_1,...,X_N$ are independent with the same distribution, the cdf can be expressed in the following form:
+%\begin{equation}
+%F_{X_{(1)}}(x) = 1 - [P(\{X > x\})]^N
+%\end{equation}
+%$P(\{X > x\})$ can be rewritten in terms of $F_X(x)$. This provides the following result:
+%\begin{equation}
+%\label{1st order cdf}
+%F_{X_{(1)}}(x) = 1 - [1 - F_X(x)]^N
+%\end{equation}
+%The pdf of the first order statistic is the derivative of the cdf given in equation \eqref{1st order cdf}.
+%\begin{equation}
+%F_{X_{(1)}}(x) = -N[1 - F_X(x)]^{N-1}(-f_X(x))
+%\end{equation}
+%After simplifying the derivative, the pdf of the first order statistic can be written as follows:
+%\begin{equation}
+%f_{X_{(1)}}(x) = N[1 - F_X(x)]^{N-1}f_X(x)
+%\end{equation}
+
+
+%% New Code
+The cumulative distribution function (cdf) of the first-order statistic can be expressed as follows:
 \begin{equation}
 F_{X_{(1)}}(x) = P(\{X_{(1)} \leq x\})
 \end{equation}
-Note that there are many ways for $X_{(1)}$ to be less than or equal to $x$. To simplify this problem, $F_{X_{(1)}}(x)$ can be expressed in the following form:
+%  is smaller than or equal to $x$,
+If $X_{(1)} \leq x$, not much can be said about $X_{(2)},...,X_{(N)}$. These random variables can be larger than or smaller than $x$ and still provide $X_{(1)} \leq x$. However, the cdf of the first-order statistic can be expressed in a more useful form as follows:
 \begin{equation}
 F_{X_{(1)}}(x) = 1 - P(\{X_{(1)} > x\})
 \end{equation}
-For $X_{(1)}$ to be greater than $x$, each $X$ ($X_1,...,X_N$) must be greater than $x$.
+If $X_{(1)} > x$, $X_{(2)},...,X_{(N)}$ are also greater than $x$. Therefore, if  $X_{(1)} > x$, each of the random variables $X_1,...,X_N$ must be greater than $x$. 
 \begin{equation}
-F_{X_{(1)}}(x) = 1 - P(\{X_1 > x \} \cap \cdots \cap \{X_N > x \})
+F_{X_{(1)}}(x) = 1 - P\left(\bigcap_{i=1}^N\{X_i > x\}\right)
 \end{equation}
-Because $X_1,...,X_N$ are independent with the same distribution, the cdf can be expressed in the following form:
+Because the random variables $X_1,...,X_N$ are independent, the cdf of the first-order statistic can be written as follows:
 \begin{equation}
-F_{X_{(1)}}(x) = 1 - [P(\{X > x\})]^N
+F_{X_{(1)}}(x) = 1 - \prod_{i=1}^N P(\{X_i > x\})
 \end{equation}
-$P(\{X > x\})$ can be rewritten in terms of $F_X(x)$. This provides the following result:
+This equation can be rewritten in terms of the distribution functions $F_{X_1}(x),...,F_{X_N}(x)$ as follows:
 \begin{equation}
-\label{1st order cdf}
+\begin{gathered}
+F_{X_{(1)}}(x) = 1 - \prod_{i=1}^N (1-P(\{X_i \leq x\}))\\
+= 1 - \prod_{i=1}^N (1-F_{X_i}(x))
+\end{gathered}
+\end{equation}
+Each of the random variables $X_1,...,X_N$ has the same distribution.
+\begin{equation}
+F_{X_1}(x)=\cdots=F_{X_N}(x)=F_X(x)
+\end{equation}
+Therefore, the cdf of the first-order statistic can be expressed as follows: 
+\begin{equation}
 F_{X_{(1)}}(x) = 1 - [1 - F_X(x)]^N
 \end{equation}
-The pdf of the first order statistic is the derivative of the cdf given in equation \eqref{1st order cdf}.
+The probability density function (pdf) of the first-order statistic is the derivative of the cdf with respect to $x$.
 \begin{equation}
-F_{X_{(1)}}(x) = -N[1 - F_X(x)]^{N-1}(-f_X(x))
+f_{X_{(1)}}(x) = \frac{d}{dx}\left\{F_{X_{(1)}}(x)\right\}
 \end{equation}
-After simplifying the derivative, the pdf of the first order statistic can be written as follows:
+Solving for the derivative, the following equation results:
+\begin{equation}
+f_{X_{(1)}}(x) = -N[1 - F_X(x)]^{N-1}(-f_X(x))
+\end{equation}
+Finally, after simplifying, the pdf of the first order statistic can be expressed as follows:
 \begin{equation}
 f_{X_{(1)}}(x) = N[1 - F_X(x)]^{N-1}f_X(x)
 \end{equation}
