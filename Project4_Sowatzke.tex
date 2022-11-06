@@ -231,41 +231,41 @@ f_{X_{(n)}}(x) = f_X(x)\sum_{k=n}^{N}\binom{N}{k}k[F_X(x)]^{k-1}[1-F_X(x)]^{N-k}
 If the binomial coefficients are expanded, the resulting pdf can be further reduced:
 \begin{equation}
 \begin{gathered}
-f_{X_{(n)}}(x) = f_X(x)\sum_{k=n}^{N}\frac{N!}{k!(N-k)!}k[F_X(x)]^{k-1}\cdot\\
-[1-F_X(x)]^{N-k} - f_X(x)\sum_{k=n}^{N-1}\frac{N!}{k!(N-k)!}\cdot\\
-(N-k)[F_X(x)]^{k}[1-F_X(x)]^{N-k-1}
+f_{X_{(n)}}(x) = f_X(x)\sum_{k=n}^{N}\frac{N!}{k!(N-k)!}k[F_X(x)]^{k-1}\\
+\cdot[1-F_X(x)]^{N-k} - f_X(x)\sum_{k=n}^{N-1}\frac{N!}{k!(N-k)!}\\
+\cdot(N-k)[F_X(x)]^{k}[1-F_X(x)]^{N-k-1}
 \end{gathered}
 \end{equation}
 After canceling terms in the numerator of the expanded binomial coefficients, the following equation results:
 \begin{equation}
 \begin{gathered}
-f_{X_{(n)}}(x) = f_X(x)\sum_{k=n}^{N}\frac{N!}{(k-1)!(N-k)!}[F_X(x)]^{k-1}\cdot\\
-[1-F_X(x)]^{N-k} - f_X(x)\sum_{k=n}^{N-1}\frac{N!}{k!(N-k-1)!}\cdot\\
-[F_X(x)]^{k}[1-F_X(x)]^{N-k-1}
+f_{X_{(n)}}(x) = f_X(x)\sum_{k=n}^{N}\frac{N!}{(k-1)!(N-k)!}[F_X(x)]^{k-1}\\
+\cdot[1-F_X(x)]^{N-k} - f_X(x)\sum_{k=n}^{N-1}\frac{N!}{k!(N-k-1)!}\\
+\cdot[F_X(x)]^{k}[1-F_X(x)]^{N-k-1}
 \end{gathered}
 \end{equation}
 After rearranging terms, the equation can be reexpressed as follows:
 \begin{equation}
 \begin{gathered}
-f_{X_{(n)}}(x) = f_X(x)\sum_{k=n}^{N}\frac{N(N-1)!}{(k-1)!(N-k)!}[F_X(x)]^{k-1}\cdot\\
-[1-F_X(x)]^{N-k} - f_X(x)\sum_{k=n}^{N-1}\frac{N(N-1)!}{k!(N-k-1)!}\cdot\\
-[F_X(x)]^{k}[1-F_X(x)]^{N-k-1}
+f_{X_{(n)}}(x) = f_X(x)\sum_{k=n}^{N}\frac{N(N-1)!}{(k-1)!(N-k)!}[F_X(x)]^{k-1}\\
+\cdot[1-F_X(x)]^{N-k} - f_X(x)\sum_{k=n}^{N-1}\frac{N(N-1)!}{k!(N-k-1)!}\\
+\cdot[F_X(x)]^{k}[1-F_X(x)]^{N-k-1}
 \end{gathered}
 \end{equation}
 This equation can be rewritten in terms of binomial coefficients.
 \begin{equation}
 \begin{gathered}
-f_{X_{(n)}}(x) = Nf_X(x)\sum_{k=n}^{N}\binom{N-1}{k-1}[F_X(x)]^{k-1}\cdot\\
-[1-F_X(x)]^{N-k} - Nf_X(x)\sum_{k=n}^{N-1}\binom{N-1}{k}\cdot\\
-[F_X(x)]^{k}[1-F_X(x)]^{N-k-1}
+f_{X_{(n)}}(x) = Nf_X(x)\sum_{k=n}^{N}\binom{N-1}{k-1}[F_X(x)]^{k-1}\\
+\cdot[1-F_X(x)]^{N-k} - Nf_X(x)\sum_{k=n}^{N-1}\binom{N-1}{k}\\
+\cdot[F_X(x)]^{k}[1-F_X(x)]^{N-k-1}
 \end{gathered}
 \end{equation}
 If $m$ is define as $k-1$, the first summation can be rewritten as:
 \begin{equation}
 \begin{gathered}
-f_{X_{(n)}}(x) = Nf_X(x)\sum_{m=n-1}^{N-1}\binom{N-1}{m}[F_X(x)]^{m}\cdot\\
-[1-F_X(x)]^{N-m-1} - Nf_X(x)\sum_{k=n}^{N-1}\binom{N-1}{k}\cdot\\
-[F_X(x)]^{k}[1-F_X(x)]^{N-k-1}
+f_{X_{(n)}}(x) = Nf_X(x)\sum_{m=n-1}^{N-1}\binom{N-1}{m}[F_X(x)]^{m}\\
+\cdot[1-F_X(x)]^{N-m-1} - Nf_X(x)\sum_{k=n}^{N-1}\binom{N-1}{k}\\
+\cdot[F_X(x)]^{k}[1-F_X(x)]^{N-k-1}
 \end{gathered}
 \end{equation}
 After the second sum is subtracted from the first, all that remains is the first term of the first summation.
@@ -275,11 +275,11 @@ f_{X_{(n)}}(x) = Nf_X(x)\binom{N-1}{n-1}[F_X(x)]^{n-1}[1-F_X(x)]^{N-n}
 Finally, the pdf of the nth-order statistic can be expressed using the following equation:
 \begin{equation}
 \begin{gathered}
-f_{X_{(n)}}(x) = \frac{N!}{(n-1)!(N-n)!}\cdot\\
-[F_X(x)]^{n-1}[1-F_X(x)]^{N-n}f_X(x)
+f_{X_{(n)}}(x) = \frac{N!}{(n-1)!(N-n)!}\\
+\cdot[F_X(x)]^{n-1}[1-F_X(x)]^{N-n}f_X(x)
 \end{gathered}
 \end{equation}
-Substituting $n=1$ and $n=N$, both the first-order and Nth-order statistics can be confirmed. 
+Substituting $n=1$ and $n=N$, the pdf of the first-order and Nth-order statistic can be confirmed. 
 %% Old Material
 %The results from Section \ref{First-Order Statistic Section} and \ref{Nth-Order Statistic Section} can be generalized, to provide the pdf for nth-order statistic where $n\in[1,N]$. 
 %\begin{figure}[H]
