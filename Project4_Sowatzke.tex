@@ -95,11 +95,12 @@ F_{X_{(1)}}(x) = P(\{X_{(1)} \leq x\})
 \end{equation}
 %  is smaller than or equal to $x$,
 If $X_{(1)} \leq x$, no direct conclusions can be drawn about %not much can be said about 
-$X_{(2)},...,X_{(N)}$. The set of random variables $X_{(2)},...,X_{(N)}$ can be larger than or smaller than $x$ and still provide $X_{(1)} \leq x$. Note the cdf of the first-order statistic can also be expressed in the following form:
+$X_{(2)},...,X_{(N)}$. The set of random variables $X_{(2)},...,X_{(N)}$ can be larger than or smaller than $x$ and still provide $X_{(1)} \leq x$. Note that the cdf of the first-order statistic can also be expressed in the following form:
 \begin{equation}
 F_{X_{(1)}}(x) = 1 - P(\{X_{(1)} > x\})
 \end{equation}
-If $X_{(1)} > x$, $X_{(2)},...,X_{(N)}$ must be greater than $x$. Therefore, if  $X_{(1)} > x$, each of the random variables $X_1,...,X_N$ must be greater than $x$.
+If $X_{(1)} > x$, $X_{(2)},...,X_{(N)}$ must be greater than $x$. Therefore, $X_{(1)} > x$ is equivalent to each of the random variables $X_1,...,X_N$ being greater than $x$. 
+%This can be expressed in the following form:
 \begin{equation}
 F_{X_{(1)}}(x) = 1 - P\left(\bigcap_{i=1}^N\{X_i > x\}\right)
 \end{equation}
@@ -161,11 +162,11 @@ f_{X_{(1)}}(x) = N[1 - F_X(x)]^{N-1}f_X(x)
 %\end{equation}
 
 % New Code
-The cdf of the Nth-order statistic function can be expressed as follows:
+The cdf of the Nth-order statistic function is given by the following equation:
 \begin{equation}
 F_{X_{(N)}}(x) = P(\{X_{(N)} \leq x\})
 \end{equation}
-If $X_{(N)} \leq x$, $X_{(1)},...,X_{(N-1)}$ are also less than or equal to $x$. Therefore, if  $X_{(N)} \leq x$, each of the random variables $X_1,...,X_N$ must be less than or equal to $x$.
+If $X_{(N)} \leq x$, $X_{(1)},...,X_{(N-1)}$ must be less than or equal to $x$. Therefore, $X_{(N)} \leq x$ is equivalent to each of the random variables $X_1,...,X_N$ being less than or equal to $x$.
 \begin{equation}
 F_{X_{(N)}}(x) = P\left(\bigcap_{i=1}^N\{X_i \leq x\}\right)
 \end{equation}
