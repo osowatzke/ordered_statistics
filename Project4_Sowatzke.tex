@@ -94,11 +94,12 @@ The cumulative distribution function (cdf) of the first-order statistic can be e
 F_{X_{(1)}}(x) = P(\{X_{(1)} \leq x\})
 \end{equation}
 %  is smaller than or equal to $x$,
-If $X_{(1)} \leq x$, not much can be said about $X_{(2)},...,X_{(N)}$. These random variables can be larger than or smaller than $x$ and still provide $X_{(1)} \leq x$. However, the cdf of the first-order statistic can be expressed in a more useful form as follows:
+If $X_{(1)} \leq x$, no direct conclusions can be drawn about %not much can be said about 
+$X_{(2)},...,X_{(N)}$. The set of random variables $X_{(2)},...,X_{(N)}$ can be larger than or smaller than $x$ and still provide $X_{(1)} \leq x$. Note the cdf of the first-order statistic can also be expressed in the following form:
 \begin{equation}
 F_{X_{(1)}}(x) = 1 - P(\{X_{(1)} > x\})
 \end{equation}
-If $X_{(1)} > x$, $X_{(2)},...,X_{(N)}$ are also greater than $x$. Therefore, if  $X_{(1)} > x$, each of the random variables $X_1,...,X_N$ must be greater than $x$. 
+If $X_{(1)} > x$, $X_{(2)},...,X_{(N)}$ must be greater than $x$. Therefore, if  $X_{(1)} > x$, each of the random variables $X_1,...,X_N$ must be greater than $x$.
 \begin{equation}
 F_{X_{(1)}}(x) = 1 - P\left(\bigcap_{i=1}^N\{X_i > x\}\right)
 \end{equation}
