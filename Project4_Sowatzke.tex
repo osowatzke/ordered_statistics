@@ -202,7 +202,7 @@ The probability that there are exactly $k$ occurrences of $A_1$ and $N-k$ occurr
 \begin{equation}
 P_n(k) = \binom{N}{k}[P(A_1)]^k[P(A_2)]^{N-k}
 \end{equation}
-For $X_{(n)} \leq x$, there must be at least n occurrences of event $A_1$. The number of occurrences of event $A_2$ can range from $N-n$ downto $0$. Since these events are disjoint,  the cdf of the nth-order statistic can be expressed as a sum of probabilities.
+For $X_{(n)} \leq x$, there must be at least n occurrences of event $A_1$ (or a maximum of $N-n$ occurrences of event $A_2$). The event that there are n occurrences of $A_1$ and n+1 occurrences of event  $A_1$ are disjoint events. Therefore,  the cdf of the nth-order statistic can be expressed as the following sum of probabilities:
 \begin{equation}
 \label{prob sum}
 F_{X_{(n)}}(x) = \sum_{k=n}^{N}\binom{N}{k}[P(A_1)]^k[P(A_2)]^{N-k}
